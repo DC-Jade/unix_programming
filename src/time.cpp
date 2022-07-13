@@ -1,4 +1,5 @@
 #include <fcntl.h>
+#include <time.h>
 
 #include "../include/apue.h"
 
@@ -24,7 +25,13 @@ void TestTime(int argc, char *argv[]) {
 	}
 }
 
+void TestTime2() {
+	time_t t;
+	printf("time = %s\n", time(&t));
+}
+
 int main(int argc, char *argv[]) {
-	TestTime(argc, argv);
+	// TestTime(argc, argv);
+	TestTime2();
 	return 0;
 }
